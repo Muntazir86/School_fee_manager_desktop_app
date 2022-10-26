@@ -1,0 +1,161 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: #009879;
+    border-right: 2px solid #009871;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.25);
+}
+
+.navbar_link{
+    display: flex;
+    align-items: center;
+    background: #008C71;
+    color: #ffffff;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #009879;
+}
+
+.navbar_link img{
+    margin-right: 12px;
+}
+
+.navbar_link:active{
+    background: #007d65;
+}
+
+.main{
+    margin-left: 160px;
+    padding: 0 12px;
+}
+
+
+ /* main body */
+
+ input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+legend{
+    user-select: none;
+    -webkit-user-drag: none;
+}  
+.control-label{
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.form-control {
+    margin-top: 5px;
+    margin-bottom: 12px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.form-field{
+    margin-top: 5px;
+    margin-bottom: 12px;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.btn {
+    padding: 10px 15px;
+    background: #009879;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    user-select: none;
+}
+
+#saveBtn {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.btn:active{
+    background: #017c63;
+}
+
+
+/* image container */
+
+
+.img_container {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.img_btn{
+    position: relative;
+    top: 15px;
+}
+
+.img_btn button{
+    margin: 10px;
+}
+
+#pic {
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+    border-radius: 50px;
+    background: #009879;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.webcam{
+    position: absolute;
+    top: 225px;
+    right: 50px;
+    visibility: hidden;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#cam{
+    width: 250px;
+    height: 250px;
+    /* background: #007d65; */
+}
+
+#saveCamBtn{
+    position: relative;
+    margin: 0px;
+}

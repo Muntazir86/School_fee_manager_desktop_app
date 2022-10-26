@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="img-src 'self' data:;default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="history.css">
+    <title>ND School Manager</title>
+  </head>
+  <body>
+  
+    <div class="navbar">
+      <a href="index.html" class="navbar_link">
+        <img src="icons/home_black_24dp.svg">
+        Home</a>
+      <a href="add.html" class="navbar_link">
+        <img src="icons/person_add_black_24dp.svg">
+        Add Student</a>
+      <a href="history.html" class="navbar_link">
+          <img src="icons/history_white_24dp.svg">
+          History</a>
+    </div>
+
+    <div class="main">
+        <header>
+            <a href="index.html"><button id="backBtn"><img src="icons/arrow_back_black_24dp.svg" alt=""></button></a>
+            <input type="text" id="search" placeholder="Search">
+            <!-- <button id="searchBtn"><img src="icons/search_black_24dp.svg" alt="Search"></button> -->
+        </header>
+
+        <main>
+            <p id="no-items">No Items</p>
+            <div id="items"></div>
+        </main>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./history.js"></script>
+  </body>
+</html>

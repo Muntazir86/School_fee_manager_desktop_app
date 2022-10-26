@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="img-src 'self' data:;default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="student_detail.css">
+    <title>ND School Manager</title>
+  </head>
+  <body>
+  
+    <div class="navbar">
+      <a href="index.html" class="navbar_link">
+        <img src="icons/home_black_24dp.svg">
+        Home</a>
+      <a href="add.html" class="navbar_link">
+        <img src="icons/person_add_black_24dp.svg">
+        Add Student</a>
+      <a href="history.html" class="navbar_link">
+          <img src="icons/history_white_24dp.svg">
+          History</a>
+    </div>
+
+    <div class="main">
+        <a href="student_list.html"><button id="backBtn"><img src="icons/arrow_back_black_24dp.svg" alt=""></button></a>
+        
+        <div class="container">
+            <div class="info_container">
+                <div class="key">Name:</div>
+                <div class="value" id="name"></div>
+            </div>    
+            <div class="info_container">
+                <div class="key">Father Name:</div>
+                <div class="value" id="fname"></div>
+            </div>    
+            <div class="info_container">
+                <div class="key">Student CNIC No. :</div>
+                <div class="value" id="sCNIC"></div>
+            </div>    
+            <div class="info_container">
+                <div class="key">Father CNIC No. :</div>
+                <div class="value" id="fCNIC"></div>
+            </div>
+            
+            <div class="info_container">
+                <div class="key">Student Contact No. :</div>
+                <div class="value" id="sContact"></div>
+            </div>
+
+            <div class="info_container">
+                <div class="key">Father Contact No. :</div>
+                <div class="value" id="fContact"></div>
+            </div>
+
+            <div class="info_container">
+                <div class="key">Class:</div>
+                <div class="value" id="class"></div>
+            </div>    
+            
+            <div class="space"></div>
+
+            <div class="info_container">
+                <div class="key">School Fee</div>
+                <input class="text_field" type="number" name="school_fee" id="school_fee">
+            </div>
+
+            <div class="info_container">
+                <div class="key">Books Dues</div>
+                <input class="text_field" type="number" name="books_dues" id="books_dues" value="0">
+            </div>
+
+            <div class="info_container">
+                <div class="key">Uniform Dues</div>
+                <input class="text_field" type="number" name="uniform_dues" id="uniform_dues" value="0">
+            </div>
+
+            <div class="info_container">
+                <div class="key">Total Dues</div>
+                <input class="text_field" type="number" name="total_dues" id="total_dues" disabled>
+            </div>
+
+            <div class="info_container">
+                <div class="key">Paid Dues</div>
+                <input class="text_field" type="number" name="paid_dues" id="paid_dues">
+            </div>
+            <div class="info_container">
+                <div class="key">Remaining Dues</div>
+                <input class="text_field" type="number" name="remaining_dues" id="remaining_dues" disabled>
+            </div>
+
+
+            <div class="btn_container">
+                <button class="btn" id="printBtn">Print</button>
+                <button class="btn" id="saveBtn" disabled>Save</button>
+            </div>
+            
+            <button class="btn" id="deleteBtn">Delete</button>
+            <button class="btn" id="editBtn">Edit</button>
+
+        </div>
+    </div>    
+    <script src="./detail.js"></script>        
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="index.css">
+    <title>ND School Manager</title>
+  </head>
+  <body>
+  
+    <div class="navbar">
+      <a href="index.html" class="navbar_link">
+        <img src="icons/home_black_24dp.svg">
+        Home</a>
+      <a href="add.html" class="navbar_link">
+        <img src="icons/person_add_black_24dp.svg">
+        Add Student</a>
+      <a href="history.html" class="navbar_link">
+          <img src="icons/history_white_24dp.svg">
+          History</a>
+    </div>
+
+    <div class="main">
+      <div class="title">
+        <h1>ND Fast Learning School System</h1>
+        <h3><img src="icons/place_black_24dp.svg"><span>E-block Gulshan-e-Ali Housing Scheem, Sahiwal</span></h3>
+      </div>
+      
+      <div class="row">
+        <div class="card">
+          <a href="student_list.html" class="card_link">
+          <div class="total_card" id="total_card">
+            <h2>Total</h2>
+            <h1 id="total">0</h1>
+            <h3>Students</h3> 
+          </div>
+          </a>
+          
+        </div>
+  
+        <div class="card">
+          <a href="student_list.html" class="card_link">
+            <div class="paid_card" id="paid_card">
+              <h2>Dues Paid</h2>
+              <h1 id="paid">0</h1>
+              <h3>Students</h3> 
+            </div>
+          </a>
+        </div>
+  
+        <div class="card">
+          <a href="student_list.html" class="card_link">
+          <div class="unpaid_card" id="unpaid_card">
+            <h2>Dues Unpaid</h2>
+            <h1 id="unpaid">0</h1>
+            <h3>Students</h3> 
+          </div>
+          </a>
+          
+        </div>
+
+
+      </div>
+      <br>
+      <div class="contact_info">
+        
+        <h3>Principal: Mr. Muhammad Nadeem</h3>
+        <h4>Contact No. 0345-7122764</h4>
+        <h4 id="sec_num">0301-6523071</h4>
+
+      </div>
+      
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "nd-school-manager",
+  "version": "1.0.0",
+  "description": "A fee management desktop application for school",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "pack:osx": "electron-packager . ND_School_Manager --electron-version 13.1.5 --electron-zip-dir=C:/Users/drkas --out=dist/osx --platform=darwin --arch=x64 --icon=build/icon.icns",
+    "pack:win64": "electron-packager . ND_School_Manager --electron-version 13.1.5 --electron-zip-dir=C:/Users/drkas --out=dist/win --platform=win32 --arch=x64  app-version=1.0.0 --icon=build/icon.ico",
+    "pack:linux": "electron-packager . ND_School_Manager --electron-version 13.1.5 --electron-zip-dir=C:/Users/drkas --out=dist/linux --platform=linux --arch=x64  app-version=1.0.0 --icon=build/icon.png",
+    "build": "electron-builder -w",
+    "postinstall": "electron-builder install-app-deps",
+    "win-sign": "electron-builder create-self-signed-cert -p muntazir86"
+  },
+  "keywords": [
+    "Electron",
+    "Managment",
+    "School"
+  ],
+  "author": "Ghulam Shabbir",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^13.1.5",
+    "electron-builder": "^22.11.7",
+    "nodemon": "^2.0.9"
+  },
+  "dependencies": {
+    "electron-db": "^0.15.7",
+    "electron-pos-printer": "^1.2.4",
+    "electron-window-state": "^5.0.3",
+    "image-data-uri": "^1.0.0",
+    "webcamjs": "^1.0.26"
+  },
+  "build": {
+    "appId": "com.muntazir86.nd-school-manager",
+    "copyright": "Copyright 2021 muntazir86",
+    "mac": {
+      "category": "public.app-category.education"
+    },
+    "win": {
+      "certificateFile": "private/muntazir86.pfx",
+      "certificatePassword": "",
+      "publisherName": "muntazir86",
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "category": "Education"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; default-src 'self'; script-src 'self' 'unsafe-inline';">
+    <link rel="stylesheet" href="add.css">
+    <title>ND School Manager</title>
+  </head>
+  <body>
+  
+    <div class="navbar">
+      <a href="index.html" class="navbar_link">
+        <img src="icons/home_black_24dp.svg">
+        Home</a>
+
+      <a href="add.html" class="navbar_link">
+        <img src="icons/person_add_black_24dp.svg">
+        Add Student</a>
+
+      <a href="history.html" class="navbar_link">
+          <img src="icons/history_white_24dp.svg">
+          History</a>
+    </div>
+
+    <div class="main">
+
+      <div class="container">
+
+        <form name="form" class="well form-horizontal" action="" method="POST"  id="contact_form" onsubmit="return formDataSave()">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend><center><h2><b>Registration Form</b></h2></center></legend><br>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="control-label">Student Name</label><br>  
+      <input  name="student_name" placeholder="Student Name" class="form-control"  type="text" id="sname" required>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="control-label" >Father Name</label><br> 
+        <input name="father_name" placeholder="Father Name" class="form-control" type="text" id="fname" required>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" >Student CNIC/B-form No.</label><br> 
+        <input name="scnic" maxlength="13" minlength="13" placeholder="XXXXXXXXXXXXX" class="form-field" id="scnic">
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label" >Father CNIC No.</label> <br>
+        <input name="fcnic" maxlength="13" minlength="13" placeholder="XXXXXXXXXXXXX" class="form-field"  id="fcnic" required>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label" >Student Contact No.</label> <br>
+        <input name="scontact" maxlength="11" minlength="11" placeholder="03XXXXXXXXX" class="form-field"  id="scontact">
+    </div>
+
+    <div class="form-group">
+      <label class="control-label" >Father Contact No.</label> <br>
+        <input name="fcontact" maxlength="11" minlength="11" placeholder="03XXXXXXXXX" class="form-field"  id="fcontact">
+    </div>
+
+    
+      <div class="form-group"> 
+      <label class="control-label">Class</label><br>
+        <div class="col-md-4 selectContainer">
+        <div class="input-group">
+        <select name="class" class="form-control selectpicker">
+          <option value="">Select Class</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </div>
+    </div>
+    </div>
+    
+    <!-- Button -->
+    <div class="form-group">
+      <!-- <input type="submit" value="save">   -->
+      <button type="submit" class="btn" id="saveBtn">Save</button>
+    </div>
+    
+    </fieldset>
+    </form>
+    
+      </div><!-- /.container -->
+
+      <div class="img_container">
+        <img src="icons/person_white_24dp.svg" id="pic">
+        <div class="img_btn">
+          <button class="btn" id="browseBtn">Browse</button>
+          <button class="btn" id="captureBtn">Capture</button>
+          
+        </div>
+      </div>
+      
+      <div class="webcam" id="webcam_id">
+        <div id="cam"></div>
+        <div>
+          <input class="btn" type="button" id="saveCamBtn" value="Capture Image"/>
+        </div>  
+
+      </div>
+      
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./add.js">
+    
+    </script>
+  </body>
+</html>
